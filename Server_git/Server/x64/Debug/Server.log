@@ -1,0 +1,195 @@
+﻿  server.cpp
+E:\NeuraLite\Server\Server\NL_process.h(75,24): warning C4244: 'initializing': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+E:\NeuraLite\Server\Server\NL_process.h(121,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(147,34): warning C4244: '=': conversion from 'float' to 'uchar', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(190,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(195,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(302,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(313,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(323,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(348,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(352,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(363,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(367,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(398,31): warning C4305: 'argument': truncation from 'double' to 'float'
+E:\NeuraLite\Server\Server\NL_process.h(418,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(438,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(473,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(477,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(505,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(509,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(524,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\NL_process.h(559,13): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+E:\NeuraLite\Server\Server\server.cpp(189,41): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\NeuraLite\Server\Server\server.cpp(382,34): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+E:\NeuraLite\Server\Server\server.cpp(412,37): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+E:\NeuraLite\Server\Server\server.cpp(439,34): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+E:\NeuraLite\Server\Server\server.cpp(481,38): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+E:\NeuraLite\Server\Server\server.cpp(584,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\NeuraLite\Server\Server\server.cpp(599,9): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'unsigned __int64'
+E:\NeuraLite\Server\Server\server.cpp(599,9): message : consider using '%zd' in the format string
+E:\NeuraLite\Server\Server\server.cpp(733,24): warning C4244: '=': conversion from 'long' to 'i8', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1352,27): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7912,17): message : see reference to function template instantiation 'bool std::_Debug_lt_pred<_Pr&,int&,int&,0>(std::greater<float>&,_Ty1,_Ty2) noexcept(<expr>)' being compiled
+          with
+          [
+              _Pr=std::greater<float>,
+              _Ty1=int &,
+              _Ty2=int &
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(8037,13): message : see reference to function template instantiation '_BidIt std::_Insertion_sort_unchecked<_RanIt,_Pr>(const _BidIt,const _BidIt,_Pr)' being compiled
+          with
+          [
+              _BidIt=std::_Deque_unchecked_iterator<std::_Deque_val<std::_Deque_simple_types<int>>>,
+              _RanIt=std::_Deque_unchecked_iterator<std::_Deque_val<std::_Deque_simple_types<int>>>,
+              _Pr=std::greater<float>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(8067,5): message : see reference to function template instantiation 'void std::_Sort_unchecked<std::_Deque_unchecked_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>,_Fn>(_RanIt,_RanIt,__int64,_Pr)' being compiled
+          with
+          [
+              _Ty=int,
+              _Fn=std::greater<float>,
+              _RanIt=std::_Deque_unchecked_iterator<std::_Deque_val<std::_Deque_simple_types<int>>>,
+              _Pr=std::greater<float>
+          ]
+E:\NeuraLite\Server\Server\NL_process.h(71,7): message : see reference to function template instantiation 'void std::sort<std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>,std::greater<float>>(const _RanIt,const _RanIt,_Pr)' being compiled
+          with
+          [
+              _Ty=int,
+              _RanIt=std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<int>>>,
+              _Pr=std::greater<float>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1352,20): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1352,62): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1352,54): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7970,32): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(8048,21): message : see reference to function template instantiation 'std::pair<_RanIt,_RanIt> std::_Partition_by_median_guess_unchecked<_RanIt,_Pr>(_RanIt,_RanIt,_Pr)' being compiled
+          with
+          [
+              _RanIt=std::_Deque_unchecked_iterator<std::_Deque_val<std::_Deque_simple_types<int>>>,
+              _Pr=std::greater<float>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7970,22): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7974,92): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7974,82): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7985,40): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7985,30): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7999,40): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7999,30): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(719,82): warning C4244: 'initializing': conversion from '_Tp' to '_Objty', possible loss of data
+          with
+          [
+              _Tp=float
+          ]
+          and
+          [
+              _Objty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\deque(1159,23): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,_Tp&>(_Alloc &,_Objty *const ,_Tp &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<int>,
+              _Ty=int,
+              _Tp=float,
+              _Objty=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\deque(699,13): message : see reference to function template instantiation 'void std::deque<int,std::allocator<int>>::_Emplace_back_internal<_Tp&>(_Tp &)' being compiled
+          with
+          [
+              _Tp=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\deque(664,9): message : see reference to function template instantiation 'void std::deque<int,std::allocator<int>>::_Construct<_Iter,_Iter>(_Iter,const _Sent)' being compiled
+          with
+          [
+              _Iter=cv::MatIterator_<float>,
+              _Sent=cv::MatIterator_<float>
+          ]
+E:\NeuraLite\Server\Server\NL_process.h(70,32): message : see reference to function template instantiation 'std::deque<int,std::allocator<int>>::deque<cv::MatIterator_<_Tp>,0>(_Iter,_Iter)' being compiled
+          with
+          [
+              _Tp=float,
+              _Iter=cv::MatIterator_<float>
+          ]
+E:\NeuraLite\Server\Server\NL_process.h(70,32): message : see the first reference to 'std::deque<int,std::allocator<int>>::deque' in 'Saliency_Det'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1354,57): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(7912,17): message : see reference to function template instantiation 'bool std::_Debug_lt_pred<_Pr&,int&,int&,0>(std::greater<float>&,_Ty1,_Ty2) noexcept' being compiled
+          with
+          [
+              _Pr=std::greater<float>,
+              _Ty1=int &,
+              _Ty2=int &
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\algorithm(8037,13): message : see reference to function template instantiation '_BidIt std::_Insertion_sort_unchecked<_RanIt,_Pr>(const _BidIt,const _BidIt,_Pr)' being compiled
+          with
+          [
+              _BidIt=std::_Deque_unchecked_iterator<std::_Deque_val<std::_Deque_simple_types<int>>>,
+              _RanIt=std::_Deque_unchecked_iterator<std::_Deque_val<std::_Deque_simple_types<int>>>,
+              _Pr=std::greater<float>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1354,50): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xutility(1356,9): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+  Server.vcxproj -> E:\NeuraLite\Server\x64\Debug\Server.exe
