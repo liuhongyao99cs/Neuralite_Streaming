@@ -2,9 +2,12 @@
 
 Welcome to the streaming control of **Neuralite**, which is a server-driven framework to enable wireless iBCIs.
 
+## Workflow
 The high-level workflow is as follows:
 
 ![Neuralite Workflow Diagram](https://github.com/liuhongyao99cs/Neuralite/blob/main/images/neuralite_workflow.png)
+
+Neuralite first operates an offline and training stage. The server gathers full-resolution iBCI neural signal frames from the headstage (Note: Constrained by the throughput, the frame is not continuous in time, but it can still capture enough spikes for training). Then, the server constructs a minimal stream, which uses least throughput but can detect activities from all neurons. The headstage first sends this stream to the server. Ther server identifies probobly firing neurons and instructs the headstage to send high-resolution signal region of the firing neurons. With spike sorting, spikes are extracted and further used in downstream decoders.
 
 
 
