@@ -22,27 +22,44 @@ Once initialized, the system enters a bandwidth-efficient feedback loop:
 3.  **Targeted Querying:** The server analyzes the stream to identify potentially firing neurons. It then instructs the headstage to transmit **high-resolution signal regions** (Hds) specifically for those active neurons.
 4.  **Processing:** The server receives the requested high-resolution data, performs spike sorting, and forwards the extracted spikes to downstream decoders.
 
-## Trace-driven experiments
+## Trace-driven Experiments
 
-To EASILY benchmark the efficiency and streaming quality, we provide the trace-driven experiments of Neuralite. 
+To facilitate easy benchmarking of efficiency and streaming quality, we provide a suite of trace-driven experiments for Neuralite.
 
-#### Prequisit software
-1. **Spike sorting kernel**: For spike sorting, please refer to Kilosort 3 (https://github.com/neurodisney/Kilosort3), which is the SOTA template-matching spike sorting algorithm.
-2. **Downstream neural decoders**: neural decoders translate spikes into intentions of subject animals, such as CEBRA
-3. **VScode and ESP-IDF extention**: compile and flash the firmware of ESP32 as the headstage
-4. **Visual studio community 2022**: run server in Windows 11
+### 🛠️ Prerequisites
 
-#### Trace txts 
-1.**Neuron information**: templates.txt-> spike templates waveforms, power.txt, sigma.txt and other characteristics extracted from the Kilosort 3. All trace txt files can be found in (https://drive.google.com/drive/folders/149wrkDl0VkA4vgzA4Y0_X2-GQYss2SaN?usp=drive_link).
-2.**LrsMap.txt**: records the minimal stream's electrode and downsamplong factor. For example, a line in this file M  N indicates electrode M can sample once every N samples while keeping detecting the power of all neurons recorded by this electrode. This is trained based on files of neuron information.
-3.**Hdsreq.txt**: represents the region information that needs to be sent in the high-resolution stream identified by the server in the run time. The Hdsreq.txt follows the format: {start time stamp, electrode id , down sample factor}.
+1.  **Spike Sorting Kernel**: We utilize [Kilosort 3](https://github.com/neurodisney/Kilosort3), the state-of-the-art template-matching spike sorting algorithm.
+2.  **Downstream Neural Decoders**: Decoders used to translate spikes into subject intentions (e.g., [CEBRA](https://cebra.ai/)).
+3.  **VS Code & ESP-IDF Extension**: Required to compile and flash the firmware for the ESP32 headstage.
+4.  **Visual Studio Community 2022**: Required to run the server application on Windows 11.
 
-#### Code structure
-1. **Firmware in ESP32**: The code in the Headstage_git folder is for esp32. We ultilize the dual-core structure of MCU to handle the Lrs and Hds simutaneously.
-2. **Server**: The server.sln can be directly excecuted in the Windows with visual studio 2022.
+### 📂 Trace Data & Input Files
 
-#### Output
-The recieved data is stored in **class frame** and we record the frame drop sequence file.
+All trace files are available for download [here](https://drive.google.com/drive/folders/149wrkDl0VkA4vgzA4Y0_X2-GQYss2SaN?usp=drive_link).
+
+1.  **Neuron Information**
+    * `templates.txt`: Contains spike template waveforms.
+    * `power.txt`, `sigma.txt`: Contains characteristics extracted via Kilosort 3.
+2.  **LrsMap.txt**
+    * Records the **Minimal Stream's** electrode and downsampling configuration.
+    * **Format:** A line `M N` indicates that electrode `M` is sampled once every `N` samples.
+    * **Function:** This ensures the system detects the power of all neurons recorded by the electrode while minimizing throughput. It is trained based on the neuron information files.
+3.  **Hdsreq.txt**
+    * Represents the region information required for the **High-Resolution Stream**, identified by the server during runtime.
+    * **Format:** `{start time stamp, electrode id, downsample factor}`.
+
+### 🏗️ Code Structure
+
+1.  **Headstage Firmware (`Headstage_git/`)**
+    * Designed for the **ESP32**.
+    * Utilizes the MCU's dual-core structure to handle the **Lrs** (Low-resolution stream) and **Hds** (High-resolution stream) simultaneously.
+2.  **Server (`server.sln`)**
+    * A Visual Studio solution that can be executed directly on Windows with Visual Studio 2022.
+
+### 📊 Output
+
+* **Data Storage:** Received data is stored in the `frame` class.
+* **Logs:** The system records a frame drop sequence file to track transmission reliability.
 
 ## Result
 ![Neuralite Result](https://github.com/liuhongyao99cs/Neuralite/blob/main/images/result.png)
