@@ -17,27 +17,29 @@ During this initial phase, the server aggregates full-resolution iBCI neural sig
 ### 2. Online Streaming Stage
 Once initialized, the system enters a bandwidth-efficient feedback loop:
 
-1.  **Stream Construction:** The server constructs a **minimal stream** protocol that minimizes throughput usage while retaining the ability to detect activity from all neurons.
+1.  **Stream Construction:** The server constructs a **minimal stream** (Lrs) protocol that minimizes throughput usage while retaining the ability to detect activity from all neurons.
 2.  **Transmission:** The headstage transmits this minimal stream to the server.
-3.  **Targeted Querying:** The server analyzes the stream to identify potentially firing neurons. It then instructs the headstage to transmit **high-resolution signal regions** specifically for those active neurons.
+3.  **Targeted Querying:** The server analyzes the stream to identify potentially firing neurons. It then instructs the headstage to transmit **high-resolution signal regions** (Hds) specifically for those active neurons.
 4.  **Processing:** The server receives the requested high-resolution data, performs spike sorting, and forwards the extracted spikes to downstream decoders.
 
 ## Trace-driven experiments
 
 To EASILY benchmark the efficiency and streaming quality, we provide the trace-driven experiments of Neuralite. 
 
-#### Prequisit
+#### Prequisit software
 1. **Spike sorting kernel**: For spike sorting, please refer to Kilosort 3 (https://github.com/neurodisney/Kilosort3), which is the SOTA template-matching spike sorting algorithm.
 2. **Downstream neural decoders**: neural decoders translate spikes into intentions of subject animals, such as CEBRA
-3. **VScode and ESP-IDF extention**
-4. **Visual studio community 2022**
+3. **VScode and ESP-IDF extention**: compile and flash the firmware of ESP32 as the headstage
+4. **Visual studio community 2022**: run server in Windows 11
+
+#### Trace txts 
+1.**Neuron information**: templates.txt-> spike templates waveforms, power.txt, sigma.txt and other characteristics extracted from the Kilosort 3. All trace txt files can be found in (https://drive.google.com/drive/folders/149wrkDl0VkA4vgzA4Y0_X2-GQYss2SaN?usp=drive_link).
+2.**LrsMap.txt**: records the minimal stream's electrode and downsamplong factor. For example, a line in this file M  N indicates electrode M can sample once every N samples while keeping detecting the power of all neurons recorded by this electrode. This is trained based on files of neuron information.
+3.**Hdsreq.txt**: represents the region information that needs to be sent in the high-resolution stream identified by the server in the run time. The Hdsreq.txt follows the format: {start time stamp, electrode id , down sample factor}.
 
 #### Code structure
-1. **Firmware in ESP32**:
+1. **Firmware in ESP32**: The code in the Headstage_git folder is for esp32. We ultilize the dual-core structure of MCU to handle the Lrs and Hds simutaneously.
+2. **Server**: The server.sln can be directly excecuted in the Windows with visual studio 2022.
 
+#### Output
 
-If server runs a trace experiment:
-in server.cpp, comment out step 1-3 in main function. In function computeHdsReq, comment out lines 650-714.
-
-Entire project is shared in Google drive:
-https://drive.google.com/drive/folders/149wrkDl0VkA4vgzA4Y0_X2-GQYss2SaN?usp=drive_link
