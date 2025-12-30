@@ -71,3 +71,25 @@ Our experiments demonstrate that Neuralite significantly enhances wireless relia
 
 * **Robustness:** Reduces the frame drop rate by **15–24x**.
 * **Accuracy:** Maintains a spike sorting error rate of **<3%**.
+
+## 🖊️ Citation
+
+If you find our work or this code useful for your research, please cite our papers:
+
+### Neuralite (MobiCom '24)
+```bibtex
+@inproceedings{liu2024neuralite,
+  title={Neuralite: Enabling Wireless High-Resolution Brain-Computer Interfaces},
+  author={Liu, Hongyao and Wang, Junyi and Zhai, Liuqun and Fang, Yuguang and Huang, Jun},
+  booktitle={Proceedings of the 30th Annual International Conference on Mobile Computing and Networking},
+  pages={984--999},
+  year={2024}
+}
+```
+@inproceedings{liu2024neuron,
+  title={Neuron-aware brain-to-computer communication for wireless intracortical bci},
+  author={Liu, Hongyao and Wang, Junyi and Chen, Xi and Huang, Jun},
+  booktitle={Proceedings of the 25th International Workshop on Mobile Computing Systems and Applications},
+  pages={107--113},
+  year={2024}
+}
