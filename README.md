@@ -42,4 +42,7 @@ To EASILY benchmark the efficiency and streaming quality, we provide the trace-d
 2. **Server**: The server.sln can be directly excecuted in the Windows with visual studio 2022.
 
 #### Output
+The recieved data is stored in **class frame** and we record the frame drop sequence file.
 
+## Result
+![Neuralite Result](https://github.com/liuhongyao99cs/Neuralite/blob/main/images/result.png)
