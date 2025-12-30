@@ -24,14 +24,16 @@ Once initialized, the system enters a bandwidth-efficient feedback loop:
 
 ## Trace-driven experiments
 
-To benchmark the efficiency, we provide the trace-driven experiments of Neuralite. 
+To EASILY benchmark the efficiency and streaming quality, we provide the trace-driven experiments of Neuralite. 
 
 #### Prequisit
-1. **Spike sorting kernel**: For spike sorting, please refer to Kilosort 3 ![kilosort](https://github.com/neurodisney/Kilosort3), which is the SOTA template-matching spike sorting algorithm.
+1. **Spike sorting kernel**: For spike sorting, please refer to Kilosort 3 (https://github.com/neurodisney/Kilosort3), which is the SOTA template-matching spike sorting algorithm.
 2. **Downstream neural decoders**: neural decoders translate spikes into intentions of subject animals, such as CEBRA
 3. **VScode and ESP-IDF extention**
 4. **Visual studio community 2022**
 
+#### Code structure
+1. **Firmware in ESP32**:
 
 
 If server runs a trace experiment:
